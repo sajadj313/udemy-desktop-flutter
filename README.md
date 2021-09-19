@@ -1,16 +1,9 @@
-# udemy_desktop_flutter
+# Udemy clone for desktop
 
-A new Flutter project.
+Welcome to this repo.
 
-## Getting Started
+Udemy is a great platform but it lacks support for desktop users. As an inspiration, I developed this sample clone version to demonstrate the capabilities of the newly blooming Flutter for desktop.
 
-This project is a starting point for a Flutter application.
+Take a look at what I have done so far and you are welcome to contribute to this as well.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Thank you
