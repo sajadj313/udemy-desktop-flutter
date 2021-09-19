@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_desktop_flutter/classCard.dart';
+import 'package:udemy_desktop_flutter/models/class.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,17 +32,88 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 4, vsync: this, initialIndex: 0);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: GridView.count(
-        crossAxisCount: 4,
-        childAspectRatio: 0.88,
-        children: List.generate(10, (index) => const ClassCard()),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              color: const Color(0XFF1c1d1f),
+              height: 153,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(10.0),
+                  width: 1200,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const Text(
+                        'My Learning',
+                        style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'Merriweather'),
+                      ),
+                      Container(
+                        width: 1200,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: TabBar(
+                                  isScrollable: true,
+                                  padding: EdgeInsets.only(right: 20),
+                                  labelPadding: EdgeInsets.only(right: 20),
+                                  indicatorPadding: EdgeInsets.only(right: 20),
+                                  indicatorWeight: 5,
+                                  indicatorColor: Colors.grey,
+                                  controller: _tabController,
+                                  labelStyle: TextStyle(fontSize: 15),
+                                  tabs: const [
+                                    Tab(
+                                      text: 'All courses',
+                                    ),
+                                    Tab(
+                                      text: 'Lists',
+                                    ),
+                                    Tab(
+                                      text: 'Wishlist',
+                                    ),
+                                    Tab(
+                                      text: 'Archived',
+                                    )
+                                  ]),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1200),
+              child: GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 4,
+                childAspectRatio: 0.88,
+                children: getClasses().map((cls) => ClassCard(cls)).toList(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
