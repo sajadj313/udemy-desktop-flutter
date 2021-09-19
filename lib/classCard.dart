@@ -38,7 +38,11 @@ class _ClassCardState extends State<ClassCard> {
             children: [
               Stack(
                 children: [
-                  Image.asset('assets/images/${widget.cls.fileName}',height: 180,fit: BoxFit.fitHeight,),
+                  Image.asset(
+                    'assets/images/${widget.cls.fileName}',
+                    height: 180,
+                    fit: BoxFit.fitHeight,
+                  ),
                   Positioned(
                       top: 5,
                       right: 5,
@@ -70,18 +74,22 @@ class _ClassCardState extends State<ClassCard> {
                         overflow: TextOverflow.ellipsis,
                       ),
                       Expanded(child: Container()),
-                      const LinearProgressIndicator(
-                        backgroundColor: Colors.red,
-                        value: 75,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.green),
+                      LinearProgressIndicator(
+                        backgroundColor: Colors.grey.shade200,
+                        value: widget.cls.percentage,
+                        valueColor: const AlwaysStoppedAnimation<Color>(Colors.green),
                       ),
+                      const Padding(padding: EdgeInsets.only(top: 2)),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text('1% Complete'),
+                          Text('${(widget.cls.percentage * 100).toStringAsFixed(0)}% Complete'),
                           RatingBar.builder(
+                              unratedColor: Colors.grey.shade400,
                               itemSize: 20,
+                              allowHalfRating: true,
                               glowColor: Colors.amber,
+                              initialRating: widget.cls.rating,
                               itemBuilder: (context, _) => const Icon(
                                     Icons.star,
                                     color: Colors.amber,

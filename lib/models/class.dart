@@ -20,48 +20,48 @@ List<Class> getClasses() => [
       Class()
         ..title = 'React - The Complete Guide (incl Hooks, Reach Router, Redux)'
         ..description = 'Academind by Maximilian Schwarzmüller, Online Education'
-        ..percentage = 0.01
+        ..percentage = 0.04
         ..rating = 0
         ..isStarted = true
         ..fileName = 'react.png',
       Class()
         ..title = 'Flutter & Dart - The Complete Flutter App Development Course'
         ..description = 'Paulo Dichone | Android, Java, Flutter Developer and Teacher, Software Engineer - Android, Java, Flutter, Dart and Teacher'
-        ..percentage = 0.01
-        ..rating = 0
+        ..percentage = 1.0
+        ..rating = 5
         ..isStarted = true
         ..fileName = 'flutter.png',
       Class()
         ..title = 'iOS 11 & Swift 4 - The Complete iOS App Development Bootcamp'
         ..description = 'Dr. Angela Yu, Developer and Lead Instructor'
-        ..percentage = 0.01
-        ..rating = 0
+        ..percentage = 0.3
+        ..rating = 3.5
         ..isStarted = true
         ..fileName = 'swift.png',
       Class()
         ..title = 'NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)'
         ..description = 'Academind by Maximilian Schwarzmüller, Online Education'
-        ..percentage = 0.01
+        ..percentage = 1.0
         ..rating = 0
         ..isStarted = true
         ..fileName = 'node.png',
       Class()
         ..title = 'MongoDB - The Complete Developer\'s Guide 2021'
         ..description = 'Academind by Maximilian Schwarzmüller, Online Education'
-        ..percentage = 0.01
-        ..rating = 0
+        ..percentage = 0.99
+        ..rating = 5
         ..isStarted = true
         ..fileName = 'mongodb.jpeg',
       Class()
         ..title = 'React Native - The Practical Guide [2021 Edition]'
         ..description = 'Academind by Maximilian Schwarzmüller, Online Education'
-        ..percentage = 0.01
+        ..percentage = 0.0
         ..rating = 0
         ..fileName = 'rnative.png',
       Class()
         ..title = 'PHP with Laravel for beginners - Become a Master in Laravel'
         ..description = 'Edwin Diaz, Web Developer & Premium Instructor - 700,000 students'
-        ..percentage = 0.01
+        ..percentage = 0.0
         ..rating = 0
         ..fileName = 'laravel.jpg',
     ];

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_desktop_flutter/classCard.dart';
 import 'package:udemy_desktop_flutter/models/class.dart';
+import 'package:udemy_desktop_flutter/navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,9 +45,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: const NavBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -66,20 +65,20 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                         'My Learning',
                         style: TextStyle(color: Colors.white, fontSize: 30, fontFamily: 'Merriweather'),
                       ),
-                      Container(
+                      SizedBox(
                         width: 1200,
                         child: Row(
                           children: [
                             Expanded(
                               child: TabBar(
                                   isScrollable: true,
-                                  padding: EdgeInsets.only(right: 20),
-                                  labelPadding: EdgeInsets.only(right: 20),
-                                  indicatorPadding: EdgeInsets.only(right: 20),
+                                  padding: const EdgeInsets.only(right: 20),
+                                  labelPadding: const EdgeInsets.only(right: 20),
+                                  indicatorPadding: const EdgeInsets.only(right: 20),
                                   indicatorWeight: 5,
                                   indicatorColor: Colors.grey,
                                   controller: _tabController,
-                                  labelStyle: TextStyle(fontSize: 15),
+                                  labelStyle: const TextStyle(fontSize: 15),
                                   tabs: const [
                                     Tab(
                                       text: 'All courses',
