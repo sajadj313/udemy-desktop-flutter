@@ -1,6 +1,6 @@
 # Udemy clone for desktop
 
-Welcome to this repo.
+Welcome to this repo 🎉
 
 Udemy is a great platform but it lacks support for desktop users. As an inspiration, I developed this sample clone version to demonstrate the capabilities of the newly blooming Flutter for desktop.
 
